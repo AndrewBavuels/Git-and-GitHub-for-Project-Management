@@ -67,13 +67,13 @@ error: failed to push some refs to 'git@github.com:AndrewBavuels/Git-and-GitHub-
 ```
 ## What did it just happen!?
 
-- `git pull origin main`: ***.
+- `git pull origin main`: integrate changes from a remote repository (origin) into your current branch (main) back in your local repository.
 ```sh
 andrewbavuels@the-Legionnaire:~/git_github$ git pull origin main
 ...
 fatal: refusing to merge unrelated histories
 ```
-- `git pull origin main --allow-unrelated-histories`: ***.
+- `git pull origin main --allow-unrelated-histories`: I've started a new local repository and then pulled changes from a remote repository that I did not create at first.
 ```sh
 andrewbavuels@the-Legionnaire:~/git_github$ git pull origin main --allow-unrelated-histories
 ...
@@ -81,7 +81,11 @@ error: Your local changes to the following files would be overwritten by merge:
         README.md
 Please commit your changes or stash them before you merge.
 ```
-
+Now:
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git push origin main
+```
+(Insert Image here)
 ## Wrap up:
 
 **Basic Git Commands:**
