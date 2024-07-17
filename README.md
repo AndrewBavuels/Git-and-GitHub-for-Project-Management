@@ -2,8 +2,9 @@
 
 ### Table of Contents
 
-1. [xxxx](#1-x-x-x-x)
+1. [Intro - Personal Journey starting this Repository](#1-Intro---Personal-Journey-starting-this-Repository)
 
+## 1. Intro - Personal Journey starting this Repository
 A version control system like Git helps us save the history of changes and growth of our project files.
 
 Changes and differences between project versions can be similar, sometimes only altering a word or a specific part of a file. Git is optimized to store these changes atomically and incrementally, applying changes on top of previous ones back to the start of the project.
@@ -24,6 +25,69 @@ andrewbavuels@the-Legionnaire:~/git_github$ git add README.md
 ```sh
 andrewbavuels@the-Legionnaire:~/git_github$ git commit -m "Initial commit"
 ```
+
+
+- `git status`: Describes the state of files.
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+andrewbavuels@the-Legionnaire:~/git_github$ git commit -m "Update README"
+[master f7739e2] Update README
+ 1 file changed, 6 insertions(+)
+```
+**Suggestion:** Do `git status` for every action taken, one after another. ALWAYS.
+
+**Branches in Git:**
+
+- `git branch -M main`: rename the current branch master to master (RECOMMENDED).
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git branch -M main
+andrewbavuels@the-Legionnaire:~/git_github$ git status
+On branch main
+```
+- `git remote add origin <remote_url>`: sets up a connection between your local repository and a remote repository, typically hosted on platforms like GitHub.
+
+(insert image here)
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git remote add origin git@github.com:AndrewBavuels/Git-and-GitHub-for-Project-Management.git
+```
+
+- `git push -u origin main`: upload your project from your local main branch to the main branch of the remote repository in GitHub.
+
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git push -u origin main
+To github.com:AndrewBavuels/Git-and-GitHub-for-Project-Management.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'git@github.com:AndrewBavuels/Git-and-GitHub-for-Project-Management.git'
+```
+## What did it just happen!?
+
+- `git pull origin main`: ***.
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git pull origin main
+...
+fatal: refusing to merge unrelated histories
+```
+- `git pull origin main --allow-unrelated-histories`: ***.
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git pull origin main --allow-unrelated-histories
+...
+error: Your local changes to the following files would be overwritten by merge:
+        README.md
+Please commit your changes or stash them before you merge.
+```
+
+## Wrap up:
+
+**Basic Git Commands:**
+- `git init`: Initializes a Git repository.
+- `git add`: Adds specified files to the staging area.
+- `git commit -m "commit description"`: Commits staged files to the repository.
 - `git commit -am "commit description"`: Adds to staging and commits in one command (not for new files).
 - `git status`: Describes the state of files.
 - `git rm (. -r, filename) (--cached)`: Removes files from the index.
