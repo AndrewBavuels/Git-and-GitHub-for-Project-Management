@@ -17,7 +17,13 @@ andrewbavuels@the-Legionnaire:~/git_github$ git init
 Initialized empty Git repository in /home/andrewbavuels/git_github/.git/
 ```
 - `git add`: Adds specified files to the staging area.
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git add README.md
+```
 - `git commit -m "commit description"`: Commits staged files to the repository.
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git commit -m "Initial commit"
+```
 - `git commit -am "commit description"`: Adds to staging and commits in one command (not for new files).
 - `git status`: Describes the state of files.
 - `git rm (. -r, filename) (--cached)`: Removes files from the index.
