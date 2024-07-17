@@ -1,10 +1,15 @@
 # Git and GitHub for Project Management
 
+## (In working progress..)
+
 ### Table of Contents
 
 1. [Intro - Personal Journey starting this Repository](#1-Intro---Personal-Journey-starting-this-Repository)
 
 ## 1. Intro - Personal Journey starting this Repository
+
+Git and GitHub together provide robust version control capabilities, enabling efficient and collaborative software development while GitHub extends these capabilities with project hosting, social features, and collaboration tools. Understanding these tools is crucial for modern software development practices.
+
 A version control system like Git helps us save the history of changes and growth of our project files.
 
 Changes and differences between project versions can be similar, sometimes only altering a word or a specific part of a file. Git is optimized to store these changes atomically and incrementally, applying changes on top of previous ones back to the start of the project.
@@ -126,3 +131,37 @@ andrewbavuels@the-Legionnaire:~/git_github$ git push origin main
 - `git checkout`: Switches to the specified branch.
 - `git merge`: Merges the specified branch into the current branch.
 - `git branch`: Lists created branches.
+
+## 2. About Git and GitHub
+
+#### What is Git?
+Git is a distributed version control system designed by Linus Torvalds to manage changes to files and facilitate collaboration in software development projects. It tracks changes incrementally, allowing users to revert to previous versions and integrate new features. Originally for Linux, Git is now cross-platform (Linux, MacOS, Windows), operated via command-line with commands like merge, pull, add, commit, and rebase.
+
+#### Uses of Git for Projects
+Git enhances efficiency with plain text files by efficiently storing incremental changes. It's not recommended for binaries due to size increases; small, static binaries (e.g., logos) are exceptions. Binaries should be stored in a CDN (Content Delivery Network) rather than in Git repositories.
+
+#### Git Stash Usage
+Git stash allows temporarily storing changes without committing them, useful for switching contexts or saving work in progress.
+
+#### Features of Git
+Git facilitates organized and collaborative software development with features including:
+- **Version Control:** Tracks file changes for easy rollback.
+- **Branching:** Allows creating branches for parallel development.
+- **Collaboration:** Enables multiple contributors to work simultaneously.
+- **Security:** Detects file changes and ensures integrity with staged, modified, and committed states.
+- **Flexibility:** Operates locally with minimal external dependencies.
+- **Commands:** Simple command syntax, accessible for beginners in programming.
+
+#### Version Control Systems (VCS)
+VCS records changes to files over time, managing project history, comparing changes, identifying contributors, and enabling rollbacks.
+
+#### Git vs. GitHub
+GitHub is a collaborative platform using Git for version control. It hosts computer program source code, acts as a social network for developers, and serves as a portfolio. GitHub offers free public repository hosting and paid private options.
+
+#### GitHub Features
+
+- **Free Project Hosting:** Public repositories available at no cost.
+- **Project Sharing:** Easy sharing of projects.
+- **Collaboration:** Enables collaboration and contribution.
+- **Error Reduction:** Enhances maintenance, environment management, and error detection.
+- **Teamwork:** Ideal for team projects, integrating Git's version control benefits with additional project management tools.
