@@ -165,3 +165,36 @@ GitHub is a collaborative platform using Git for version control. It hosts compu
 - **Collaboration:** Enables collaboration and contribution.
 - **Error Reduction:** Enhances maintenance, environment management, and error detection.
 - **Teamwork:** Ideal for team projects, integrating Git's version control benefits with additional project management tools.
+
+## 3. Installing Git on Linux
+
+`apt-get` is a command line interface for retrieval of packages and information about them from authenticated sources and for installation, upgrade and removal of packages together with their dependencies.
+
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ apt-get
+```
+**For Development Best Practices:**
+
+`sudo apt-get update` before installing anything. This will update your system for new features to install. **Sudo** stands for **Super User DO.** It is used to run commands as an administrator (without restrictions).
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ sudo apt-get update
+andrewbavuels@the-Legionnaire:~/git_github$ apt-get
+```
+`sudo apt-get update` upgrade all the currently installed packages to the newest versions available based on the repositories configured in your system.
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ sudo apt-get upgrade
+```
+**Now we are going to install Git:**
+
+`sudo apt-get install git` installs the Git version control system on your computer.
+
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ sudo apt-get install git
+```
+**Let's verify that Git is installed and check which version is installed:**
+
+```sh
+andrewbavuels@the-Legionnaire:~/git_github$ git --version
+git version 2.25.1
+```
+
