@@ -2,7 +2,7 @@
 
 ## Part I - Git and Version Control Fundamentals
 
-### 1. Initial Git Setup: init and config
+## 1. Initial Git Setup: init and config
 
 This section introduces you to setting up Git for your project and configuring it to use the default branch `main` and your personal information.
 
@@ -74,7 +74,7 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$ git config --list
 
 [GIT CHEAT SHEET](https://education.github.com/git-cheat-sheet-education.pdf)
 
-### 2. Basic Git Commands: add, commit and log
+## 2. Basic Git Commands: add, commit and log
 
 - `ls -a`: lists all files in the current directory, including hidden files (those that begin with a dot, such as .git):
 
@@ -220,7 +220,7 @@ Date:   Fri Nov 29 13:02:47 2024 +0100
 andrewbavuels@the-Legionnaire:~/virtual_envs$
 ```
 
-### 3. Branches and Merging Changes: branch, merge, switch and checkout
+## 3. Branches and Merging Changes: branch, merge, switch and checkout
 
 - `git branch`: Displays the list of branches. The asterisk (*) indicates the current branch:
 
@@ -299,7 +299,7 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$
     Deleted branch virtual_envs (was d06a822).
     ```
 
-### 4. Going Back in Time in Git: reset and revert
+## 4. Going Back in Time in Git: reset and revert
 
 In this section, we demonstrate how to use the `git reset` and `git revert` commands to undo changes in your Git history.
 
@@ -393,9 +393,9 @@ Use: Unstage changes but keep them locally.
 - Use `revert` to safely undo changes while preserving project history.
 - Use `reset` to modify or remove commits locally, with the option to keep or discard changes in the working directory.
 
-### 5. Version Management: Tag and Checkout
+## 5. Version Management: Tag and Checkout
 
-#### Creating and Viewing Tags
+### Creating and Viewing Tags
 
 - `git tag -a <tag-name> -m "<message>"`: Create an annotated tag at the current commit with a message. For example, creating tag `v1.0`:
 
@@ -422,7 +422,7 @@ Use: Unstage changes but keep them locally.
     andrewbavuels@the-Legionnaire:~/virtual_envs$ git tag -d v1.0
     ```
 
-#### Switching Between Commits and Branches
+### Switching Between Commits and Branches
 
 - `git tag <tag-name>`: Create a new tag at any commit. For example, creating tag `v2.0`:
 
@@ -448,7 +448,7 @@ Use: Unstage changes but keep them locally.
     andrewbavuels@the-Legionnaire:~/virtual_envs$ git checkout main
     ```
 
-#### Git Branching
+### Git Branching
 
 - `git branch`: List branches and show the current branch. For example, viewing the active branch:
 
@@ -462,9 +462,9 @@ Use: Unstage changes but keep them locally.
 - **Detached HEAD**: Checkout commits directly to explore or experiment, but be aware that changes made here are not tied to any branch unless a new branch is created.
 - **Switching Back**: Use `git checkout <branch>` to return to a branch after exploring a specific commit.
 
-### 6. How to Resolve Branch Conflicts in Git
+## 6. How to Resolve Branch Conflicts in Git
 
-#### Step-by-Step Process
+### Step-by-Step Process
 
 - `git branch`: View the current branch. For example, checking the active branch:
 
@@ -618,17 +618,13 @@ Use: Unstage changes but keep them locally.
 - **Manual Resolution**: Edit the conflicting files, remove conflict markers, and then stage and commit the changes.
 - **Finalizing Merge**: Always commit after resolving conflicts to complete the merge process.
 
-<!-- ### 7. Using Git from Visual Studio Code (PENDING) -->
+## Part II - GitHub Fundamentals
 
-## Part II - Introduction to GitHub
-
-<!-- ### 7. Why GitHub is key for Developers -->
-
-### 7. Managing Repositories on GitHub
+## 7. Managing Repositories on GitHub
 
 If you already have a **README.md file in your local folder created using Visual Studio Code (VSC)** and want to upload it to a remote repository on GitHub, the best option is to use the second alternative: "push an existing repository from the command line", since you already have an existing repository:
 
-#### Uploading an Existing Repository to GitHub
+### Uploading an Existing Repository to GitHub
 
 - `git init`: Initialize a Git repository in your local folder. If you haven't already initialized the repository, run this command:
 
@@ -677,15 +673,15 @@ If you already have a **README.md file in your local folder created using Visual
     Branch 'main' set up to track remote branch 'main' from 'origin'.
     ```
 
-#### Key Takeaways:
+### Key Takeaways:
 - **Efficient Workflow**: This method is ideal when you already have local files and want to sync them with GitHub.
 - **Remote Link**: Use `git remote add origin` to connect your local repository to a remote one.
 - **Branch Management**: Ensure your main branch is properly set with `git branch -M main` and push to GitHub with `git push`.
 - **Authentication**: Choose between SSH and HTTPS for repository URL depending on your setup.
 
-### 8. How to Setup SSH for GitHub: Step-by-Step Guide
+## 8. How to Setup SSH for GitHub: Step-by-Step Guide
 
-#### Generating a New SSH Key Pair
+### Generating a New SSH Key Pair
 
 - `ssh-keygen -t ed25519 -C "<your-email@example.com>"`: This command generates a new SSH key pair using the ED25519 algorithm. Replace `<your-email@example.com>` with your GitHub email address. For example:
 
@@ -701,7 +697,7 @@ If you already have a **README.md file in your local folder created using Visual
     Your public key has been saved in /home/andrewbavuels/.ssh/id_ed25519.pub
     ```
 
-#### Adding the SSH Key to the SSH Agent
+### Adding the SSH Key to the SSH Agent
 
 - `eval "$(ssh-agent -s)"`: Start the SSH agent to manage your keys. For example:
 
@@ -718,7 +714,7 @@ If you already have a **README.md file in your local folder created using Visual
     Identity added: /home/andrewbavuels/.ssh/id_ed25519 (andrew.bavuels@gmail.com)
     ```
 
-#### Copying the Public Key to GitHub
+### Copying the Public Key to GitHub
 
 - `nano ~/.ssh/id_ed25519.pub`: Open the public key file in a text editor to copy it. For example:
 
@@ -728,14 +724,14 @@ If you already have a **README.md file in your local folder created using Visual
 
     Copy the entire contents of the file, which starts with `ssh-ed25519`.
 
-#### Adding the SSH Key to GitHub
+### Adding the SSH Key to GitHub
 
 - Go to GitHub:
   - Navigate to **Settings** > **SSH and GPG keys** > **New SSH key**.
   - Paste the public key you copied and give it a title (e.g., `andrew.bavuels@gmail.com`).
   - Click **Add SSH key** to save it.
 
-#### Testing the SSH Connection
+### Testing the SSH Connection
 
 - `ssh -T git@github.com`: Test the connection to GitHub using SSH. You should see a success message:
 
@@ -748,9 +744,9 @@ If you already have a **README.md file in your local folder created using Visual
 - **SSH Key Generation**: Use `ssh-keygen` to create a new SSH key pair for secure authentication with GitHub.
 - **SSH Agent**: Add your SSH key to the agent to securely authenticate with GitHub without entering your password every time.
 
-### 9. Clone and Fork Repositories
+## 9. Clone and Fork Repositories
 
-#### Cloning a Repository Using SSH
+### Cloning a Repository Using SSH
 
 - `git clone git@github.com:<username>/<repository>.git`: Clone a repository from GitHub using SSH. For example:
 
@@ -767,7 +763,7 @@ If you already have a **README.md file in your local folder created using Visual
     Resolving deltas: 100% (931/931), done.
     ```
 
-#### Forking a Repository
+### Forking a Repository
 
 - Forking a repository allows you to create a copy of an existing repository under your GitHub account. This lets you freely experiment with changes without affecting the original project.
 
@@ -802,9 +798,9 @@ You now have a fork of the `shinybones` repository under your GitHub account and
 
   - **Forking + Cloning a Repository**: Forking a repository creates a copy of the repository under your own GitHub account. This is typically used when you want to contribute to a project but don't have write access to the original repository. After forking the repository, you clone it to your local machine to work on the project. The forked repository allows you to freely experiment with changes, and later you can submit a pull request to the original repository to propose your changes.
 
-### 10. Working with Remote Repositories: Push, Pull, and Fetch
+## 10. Working with Remote Repositories: Push, Pull, and Fetch
 
-#### Pushing Changes from Local Repository to GitHub
+### Pushing Changes from Local Repository to GitHub
 
 1. Check your branch:
     ```sh
@@ -838,7 +834,7 @@ You now have a fork of the `shinybones` repository under your GitHub account and
     Branch 'main' set up to track remote branch 'main' from 'origin'.
     ```
 
-#### Pulling Changes from GitHub to Local Repository
+### Pulling Changes from GitHub to Local Repository
 
 1. Edit a file directly on GitHub, commit the changes, and confirm they don’t appear locally.
 
@@ -861,7 +857,7 @@ You now have a fork of the `shinybones` repository under your GitHub account and
 
 3. Verify that the changes appear locally.
 
-#### Fetching Updates from GitHub Without Merging
+### Fetching Updates from GitHub Without Merging
 
 1. Make additional changes on GitHub (e.g., another README edit) and commit them.
 
@@ -929,18 +925,18 @@ You now have a fork of the `shinybones` repository under your GitHub account and
    - Use the integrated source control feature in VSC for seamless commit management.
    - Terminal commands can be complemented with UI operations for efficiency.
 
-### 11. Pull Requests on GitHub
+## 11. Pull Requests on GitHub
 
-#### Steps to Create and Merge a Pull Request (PR)
+### Steps to Create and Merge a Pull Request (PR)
 
-##### 1. Create and Switch to a New Branch
+#### 1. Create and Switch to a New Branch
 Start by creating a new branch and switching to it:
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ git checkout -b developer_01
 Switched to a new branch 'developer_01'
 ```
 
-##### 2. Make Changes in the Local Branch
+#### 2. Make Changes in the Local Branch
 Edit files (e.g., `README.md`), then stage and commit your changes:
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ git add README.md
@@ -949,7 +945,7 @@ andrewbavuels@the-Lionnaire:~/virtual_envs$ git commit -m "changes from develope
  1 file changed, 2 insertions(+)
 ```
 
-##### 3. Push the Local Branch to GitHub
+#### 3. Push the Local Branch to GitHub
 Push your branch to GitHub for the first time and set the upstream branch:
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ git push -u origin developer_01
@@ -964,7 +960,7 @@ remote: Create a pull request for 'developer_01' on GitHub by visiting:
 remote:      https://github.com/AndrewBavuels/Virtual-Environments-with-Anaconda-and-Jupyter/pull/new/developer_01
 ```
 
-##### 4. Create a Pull Request on GitHub
+#### 4. Create a Pull Request on GitHub
 - Visit the link provided in the terminal or go to your GitHub repository.
 - Select the branch `developer_01` to create a Pull Request (PR).
 - Add details:
@@ -972,10 +968,10 @@ remote:      https://github.com/AndrewBavuels/Virtual-Environments-with-Anaconda
     - **Description**: e.g., `Updated the README with new examples and steps.`
 - Submit the Pull Request for review.
 
-##### 5. Review and Merge the Pull Request
+#### 5. Review and Merge the Pull Request
 After reviewing the PR, click **Merge** to integrate the changes into the main branch.
 
-##### 6. Syncing the Local Repository After Merging
+#### 6. Syncing the Local Repository After Merging
 Switch back to the main branch:
 ```sh
 andrewbavuels@the-Legionnaire:~/virtual_envs$ git checkout main
