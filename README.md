@@ -1,5 +1,9 @@
 # Git and GitHub for Project Management
 
+_"To put you in context, I'm working on a side project that I haven't uploaded to GitHub (until this moment). So I'm leaving the folder wherever I am and going to the folder of the project I want to upload."_
+
+![virtual_envs_repo](https://github.com/user-attachments/assets/ce774a23-3059-4573-bc28-496de73228be)
+
 ## *Part I: Git and Version Control Fundamentals*
 
 ### **1. Initial Git Setup: init and config**
@@ -13,9 +17,6 @@ andrewbavuels@the-Legionnaire:~/git_github$ git --version
 git version 2.34.1
 ```
 This shows the version of Git installed on your system.
-
-
-_"To put you in context, I'm working on a side project that I haven't uploaded to GitHub (until this moment). So I'm leaving the folder wherever I am and going to the folder of the project I want to upload."_
 
 - **Navigate to your project folder:** Move to the directory where your project is stored:
 
