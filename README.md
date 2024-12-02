@@ -1,8 +1,8 @@
 # Git and GitHub for Project Management
 
-## Part I - Git and Version Control Fundamentals
+## *Part I: Git and Version Control Fundamentals*
 
-## 1. Initial Git Setup: init and config
+### **1. Initial Git Setup: init and config**
 
 This section introduces you to setting up Git for your project and configuring it to use the default branch `main` and your personal information.
 
@@ -74,7 +74,7 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$ git config --list
 
 [GIT CHEAT SHEET](https://education.github.com/git-cheat-sheet-education.pdf)
 
-## 2. Basic Git Commands: add, commit and log
+### **2. Basic Git Commands: add, commit and log**
 
 - `ls -a`: lists all files in the current directory, including hidden files (those that begin with a dot, such as .git):
 
@@ -220,7 +220,7 @@ Date:   Fri Nov 29 13:02:47 2024 +0100
 andrewbavuels@the-Legionnaire:~/virtual_envs$
 ```
 
-## 3. Branches and Merging Changes: branch, merge, switch and checkout
+### **3. Branches and Merging Changes: branch, merge, switch and checkout**
 
 - `git branch`: Displays the list of branches. The asterisk (*) indicates the current branch:
 
@@ -299,7 +299,7 @@ andrewbavuels@the-Legionnaire:~/virtual_envs$
     Deleted branch virtual_envs (was d06a822).
     ```
 
-## 4. Going Back in Time in Git: reset and revert
+### **4. Going Back in Time in Git: reset and revert**
 
 In this section, we demonstrate how to use the `git reset` and `git revert` commands to undo changes in your Git history.
 
@@ -393,7 +393,7 @@ Use: Unstage changes but keep them locally.
 - Use `revert` to safely undo changes while preserving project history.
 - Use `reset` to modify or remove commits locally, with the option to keep or discard changes in the working directory.
 
-## 5. Version Management: Tag and Checkout
+### **5. Version Management: Tag and Checkout**
 
 ### Creating and Viewing Tags
 
@@ -462,7 +462,7 @@ Use: Unstage changes but keep them locally.
 - **Detached HEAD**: Checkout commits directly to explore or experiment, but be aware that changes made here are not tied to any branch unless a new branch is created.
 - **Switching Back**: Use `git checkout <branch>` to return to a branch after exploring a specific commit.
 
-## 6. How to Resolve Branch Conflicts in Git
+### **6. How to Resolve Branch Conflicts in Git**
 
 ### Step-by-Step Process
 
@@ -618,9 +618,9 @@ Use: Unstage changes but keep them locally.
 - **Manual Resolution**: Edit the conflicting files, remove conflict markers, and then stage and commit the changes.
 - **Finalizing Merge**: Always commit after resolving conflicts to complete the merge process.
 
-## Part II - GitHub Fundamentals
+## *Part II - GitHub Fundamentals*
 
-## 7. Managing Repositories on GitHub
+### **7. Managing Repositories on GitHub**
 
 If you already have a **README.md file in your local folder created using Visual Studio Code (VSC)** and want to upload it to a remote repository on GitHub, the best option is to use the second alternative: "push an existing repository from the command line", since you already have an existing repository:
 
@@ -679,7 +679,7 @@ If you already have a **README.md file in your local folder created using Visual
 - **Branch Management**: Ensure your main branch is properly set with `git branch -M main` and push to GitHub with `git push`.
 - **Authentication**: Choose between SSH and HTTPS for repository URL depending on your setup.
 
-## 8. How to Setup SSH for GitHub: Step-by-Step Guide
+### **8. How to Setup SSH for GitHub: Step-by-Step Guide**
 
 ### Generating a New SSH Key Pair
 
@@ -744,7 +744,7 @@ If you already have a **README.md file in your local folder created using Visual
 - **SSH Key Generation**: Use `ssh-keygen` to create a new SSH key pair for secure authentication with GitHub.
 - **SSH Agent**: Add your SSH key to the agent to securely authenticate with GitHub without entering your password every time.
 
-## 9. Clone and Fork Repositories
+### **9. Clone and Fork Repositories**
 
 ### Cloning a Repository Using SSH
 
@@ -798,7 +798,7 @@ You now have a fork of the `shinybones` repository under your GitHub account and
 
   - **Forking + Cloning a Repository**: Forking a repository creates a copy of the repository under your own GitHub account. This is typically used when you want to contribute to a project but don't have write access to the original repository. After forking the repository, you clone it to your local machine to work on the project. The forked repository allows you to freely experiment with changes, and later you can submit a pull request to the original repository to propose your changes.
 
-## 10. Working with Remote Repositories: Push, Pull, and Fetch
+### **10. Working with Remote Repositories: Push, Pull, and Fetch**
 
 ### Pushing Changes from Local Repository to GitHub
 
@@ -925,7 +925,7 @@ You now have a fork of the `shinybones` repository under your GitHub account and
    - Use the integrated source control feature in VSC for seamless commit management.
    - Terminal commands can be complemented with UI operations for efficiency.
 
-## 11. Pull Requests on GitHub
+### **11. Pull Requests on GitHub**
 
 ### Steps to Create and Merge a Pull Request (PR)
 
